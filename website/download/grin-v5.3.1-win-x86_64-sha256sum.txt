@@ -1,0 +1,3 @@
+Algorithm : SHA256
+Hash      : 95D8A3BA4F369C300F7FC60D32A6231C79C4CC81873F4F815209D11AE42D0063
+Path      : D:\a\grin\grin\target\release\grin-v5.3.1-win-x86_64.zip
