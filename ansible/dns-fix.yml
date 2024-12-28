@@ -1,0 +1,8 @@
+- hosts: www
+  remote_user: root
+  tasks:
+
+  - name: Overwrite /etc/hosts with grinminer.net DNS servers
+    ansible.builtin.shell:
+      cmd: echo -e "domain grinminer.net\nsearch grinminer.net\nnameserver 10.0.0.2\nnameserver 10.0.0.3\nnameserver 1.1.1.1" > /etc/hosts
+      

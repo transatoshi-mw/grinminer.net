@@ -1,0 +1,31 @@
+- hosts: test
+  remote_user: root
+  tasks:
+
+  - name: Create user 
+    ansible.builtin.user:
+      name: grin
+      password: <SHA-512 HASH>
+
+  - name: Install shit to compile Rust programs
+    ansible.builtin.apt:
+      pkg:
+      - libssl-dev
+      - build-essential
+      - pkg-config
+      - git
+      state: latest
+      update_cache: yes
+
+  - name: Download rust installer
+    get_url:
+      url: https://sh.rustup.rs
+      dest: /tmp/sh.rustup.rs
+      mode: '0755'
+      force: 'yes'
+
+  - name: Install rust/cargo
+    shell: /tmp/sh.rustup.rs -y 
+    become: yes
+    become_user: grin
+

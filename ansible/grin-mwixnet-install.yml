@@ -1,0 +1,63 @@
+- hosts: test
+  remote_user: root
+  tasks:
+
+  - name: Create user grin
+    ansible.builtin.user:
+      name: grin
+      password: <SHA-512 HASH>
+
+  - name: Download grin
+    get_url:
+      url: https://github.com/mimblewimble/grin/releases/download/v5.3.3_rebuild/grin-v5.3.3_rebuild-linux-x86_64.tar.gz
+      dest: /tmp/grin.tar.gz
+      mode: '0775'
+      force: 'yes'
+
+  - name: Extract grin
+    ansible.builtin.shell:
+      chdir: /home/grin/
+      cmd: tar xf /tmp/grin.tar.gz
+
+  - name: Download grin-wallet
+    get_url:
+      url: https://github.com/mimblewimble/grin-wallet/releases/download/v5.4.0-alpha.1/grin-wallet-v5.4.0-alpha.1-linux-x86_64.tar.gz
+      dest: /tmp/grin-wallet.tar.gz
+      mode: '0775'
+      force: 'yes'
+
+  - name: Extract grin-wallet
+    ansible.builtin.shell:
+      chdir: /home/grin/
+      cmd: tar xf /tmp/grin-wallet.tar.gz
+
+  - name: Download rust installer
+    get_url:
+      url: https://sh.rustup.rs
+      dest: /tmp/sh.rustup.rs
+      mode: '0755'
+      force: 'yes'
+    tags:
+      - rust
+
+  - name: Install rust/cargo
+    shell: /tmp/sh.rustup.rs -y
+    tags:
+      - rust
+
+  - name: Install mwixnet dependencies
+    ansible.builtin.apt:
+      pkg:
+      - libssl-dev
+      - build-essential
+      - pkg-config
+      - git
+      state: latest
+      update_cache: yes
+
+  - name: Download and install mwixnet
+    ansible.builtin.shell:
+      cmd: su grin
+      cmd: git clone https://github.com/mimblewimble/mwixnet
+      chdir: /home/grin/mwixnet
+      cmd: cargo build --release

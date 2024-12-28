@@ -1,0 +1,38 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+
+  - name: Install NFS server
+    ansible.builtin.apt:
+      pkg:
+      - nfs-kernel-server
+      - nfs-common
+      state: latest
+      update_cache: yes
+
+  - name: Create NFS mount
+    ansible.builtin.file:
+      path: /mnt/{{ inventory_hostname_short }}
+      state: directory
+      mode: '0777'
+      group: root
+
+  - name: Chown NFS mount
+    ansible.builtin.shell:
+      cmd: chown root /mnt/{{ inventory_hostname_short }}    
+
+  - name: Edit /etc/exports
+    ansible.builtin.lineinfile:
+      path: /etc/exports
+      line: /mnt/{{ inventory_hostname_short }} 10.0.0.0/24(rw,sync,no_subtree_check)
+          
+  - name: Exportfs
+    ansible.builtin.shell:
+      cmd: exportfs -a
+
+  - name: Enable NFS server
+    ansible.builtin.service:
+      name: nfs-kernel-server
+      enabled: true
+      state: started

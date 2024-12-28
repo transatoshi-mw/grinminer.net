@@ -1,0 +1,60 @@
+- hosts: all
+  remote_user: root
+  tasks:
+
+  - name: Create user zabbix
+    ansible.builtin.user:
+      name: zabbix
+      password: <SHA-512 HASH>
+
+  - name: Download zabbix repository
+    get_url:
+      url: https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian12_all.deb
+      dest: /tmp/
+      mode: '0775'
+      force: 'yes'
+
+  - name: Unpack and update repository
+    ansible.builtin.shell:
+      cmd: dpkg -i /tmp/zabbix-release_latest_7.2+debian12_all.deb
+
+  - name: Install zabbix-agent
+    ansible.builtin.apt:
+      name: zabbix-agent
+      name: ufw
+      state: latest
+      update_cache: yes
+
+  - name: Enable zabbix-agent.service
+    ansible.builtin.shell:
+      cmd: systemctl enable zabbix-agent
+
+  - name: DNS config overwrite
+    ansible.builtin.shell:
+      cmd: echo "domain grinminer.net \nsearch grinminer.net \nnameserver 10.0.0.2 \nnameserver 10.0.0.3 \nnameserver 1.1.1.1" > /etc/resolv.conf
+
+  - name: zabbix-agent config1
+    ansible.builtin.replace:
+      path: /etc/zabbix/zabbix_agentd.conf
+      backup: true
+      regexp: 127.0.0.1
+      replace: 10.0.0.5
+
+  - name: zabbix-agent config2
+    ansible.builtin.replace:
+      path: /etc/zabbix/zabbix_agentd.conf
+      backup: true
+      regexp: '#Hostname'
+      replace: 'Hostname'
+
+  - name: zabbix-agent config3
+    ansible.builtin.replace:
+      path: /etc/zabbix/zabbix_agentd.conf
+      backup: true
+      regexp: 'Hostname='
+      replace: 'Hostname=zabbix.grinminer.net'     
+
+  - name: restart zabbix-agent and open fw
+    ansible.builtin.shell:  
+      cmd: systemctl restart zabbix-agent
+      cmd: ufw allow 10050     

@@ -1,0 +1,33 @@
+- hosts: test
+  remote_user: root
+  tasks:
+
+  - name: Create user grin
+    ansible.builtin.user:
+      name: grin
+      group: grin
+      password: <SHA-512 HASH>
+
+  - name: Download grin
+    get_url:
+      url: https://github.com/mimblewimble/grin/releases/download/v5.3.3_rebuild/grin-v5.3.3_rebuild-linux-x86_64.tar.gz
+      dest: /tmp/grin.tar.gz
+      mode: '0775'
+      force: 'yes'
+
+  - name: Extract grin
+    ansible.builtin.shell:
+      chdir: /home/grin/
+      cmd: tar xf /tmp/grin.tar.gz
+
+  - name: Download grin-wallet
+    get_url:
+      url: https://github.com/mimblewimble/grin-wallet/releases/download/v5.4.0-alpha.1/grin-wallet-v5.4.0-alpha.1-linux-x86_64.tar.gz
+      dest: /tmp/grin-wallet.tar.gz
+      mode: '0775'
+      force: 'yes'
+
+  - name: Extract grin-wallet
+    ansible.builtin.shell:
+      chdir: /home/grin/
+      cmd: tar xf /tmp/grin-wallet.tar.gz
