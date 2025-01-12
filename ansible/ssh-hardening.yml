@@ -9,9 +9,13 @@
       state: latest
       update_cache: yes
 
-  - name: Download and install fail2ban
+  - name: Copy fail2ban jail
+    ansible.builtin.copy:
+      src: /etc/fail2ban/jail.conf
+      dest: /etc/fail2ban/jail.local
+
+  - name: Enable fail2ban
     ansible.builtin.shell:
-      cmd: cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
       cmd: systemctl enable fail2ban
       cmd: systemctl start fail2ban  
 
