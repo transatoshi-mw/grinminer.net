@@ -22,14 +22,21 @@
   - name: Replace PermitRootLogin 
     ansible.builtin.replace:
       path: /etc/ssh/sshd_config
-      regexp: PermitRootLogin yes
-      replace: PermitRootLogin prohibit-password
+      regexp: 'PermitRootLogin yes'
+      replace: 'PermitRootLogin prohibit-password'
 
   - name: Replace PasswordAuthentication
     ansible.builtin.replace:
       path: /etc/ssh/sshd_config
-      regexp: PasswordAuthentication yes
-      replace: PasswordAuthentication no    
+      regexp: '#PasswordAuthentication yes'
+      replace: 'PasswordAuthentication no' 
+
+  - name: Replace PasswordAuthentication
+    ansible.builtin.replace:
+      path: /etc/ssh/sshd_config
+      regexp: 'PasswordAuthentication yes'
+      replace: 'PasswordAuthentication no' 
+
 
   - name: Restart SSH
     ansible.builtin.shell:
