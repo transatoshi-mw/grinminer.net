@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-color: black;
+    color: #fef102;
+  }
+  
+  p {
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 14px;
+    color: whitesmoke;
+    text-wrap: balance;
+  }
+
+  input[type="text"] {
+    width: 430px;
+  }
+
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #fef102;
+    color: black;
+  }
+
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #fef102;
+    color: black;
+    border-right: black 2px solid;
+  }
+
+   /* Add an active class to highlight the current page */
+   .topnav a.grey {
+    border-right: black 2px solid;
+  }
+  
+  .responsive {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border: #fef102 solid 4px;
+    border-radius: 30px;
+    box-shadow:0 0 10px #fef102;
+    text-align: center;
+    display: block;
+  }
+
+  .diagram {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .fourohfour {
+     font-size: 80px;
+  }
+
+  .ad {
+    width: 100%;
+  }
+
+  .subtitle {
+    font-family: monospace;
+    font-size: 16px
+    font-weight: 800;
+    border: #fef102 solid 4px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 10px #fef102;
+    width: 70%;
+    height: auto;
+    margin: -5px auto 30px auto;
+    display: block;
+    text-align:center;
+    padding: 0 40px 0 40px;
+  } 
+
+  div.content {
+    text-align: center;
+    padding: 1px 16px;
+    display: block;
+  }
+
+  .cloud {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color: black;
+    display: block;
+    background-color: #fef102;
+  }
+
+  .nodes {
+    text-align: center;
+  }
+
+  .site.pad.community-pad{
+    padding-top:40px;
+    padding-bottom:40px;
+    border-top:1px solid black;
+  }
+
+  .community {
+    background-color:black;
+    padding:-10px 16px 64px 16px;
+    max-width:700px;
+    margin:0 auto;
+  }
+
+  .community a {
+    border-bottom:1px solid black
+  }
+
+  .community h2 {
+    text-align:center
+  }
+
+  .community-subheading {
+    line-height:1.4em;
+    text-align:center
+  }
+
+  .community-content {
+    margin-top:40px;
+    background-color:black;
+  }
+
+  .community-row {
+    padding:20px;
+    margin: 5px 0 5px 0;
+    display:flex;
+    flex-direction: column;
+    border: solid 1px silver;
+  }
+
+  .community-row-img {
+    height:80px;
+    width:80px;
+    margin-right:16px;
+    border-radius:15px
+  }
+
+  .community-row-content {
+    margin-top:4px
+  }
+
+  .community-row-heading {
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:4px
+  }
+
+  .community-row-desc {
+    line-height:1.4em;
+    margin-bottom:8px
+  }
+
+  .community-row-category {
+    color:#6F6F6F;
+    font-size:12px
+  }
+
+  .footer {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .topnav a:hover {
+    background-color: #fef102;
+    color: black;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .topnav a {
+      display: none; /* Hide all links by default */
+    }
+    .topnav a.icon {
+      float: right;
+      display: block; /* Show the hamburger icon */
+      color: #fef102;
+    }
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive a {
+      display: block; /* Show links when the menu is responsive */
+      float: none; /* Remove float */
+    }
+  }

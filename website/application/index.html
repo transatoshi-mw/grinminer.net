@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P53NSV9J65"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-P53NSV9J65');
+      </script>
+      <title>Grinminer.net</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="title" property="og:title" content="grinminer.net">
+      <meta name="Keywords" content="Grin, Mimblewimble, Mining, Solo, Pools, Ipollo, G1, Openwrt, Firmware, Wallet">
+      <meta name="Description" content="An alternative to the corporate cloud providing VPS services and tools to assist solo Grin miners.">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://grin.mw/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://grin.mw/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://grin.mw/favicon-16x16.png">
+      <link rel="manifest" href="https://grin.mw/site.webmanifest">
+      <meta name="theme-color" content="#fef102">
+      <!-- CSS Main  -->
+      <link rel="stylesheet" type="text/css" href="../main.css")>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body width="device-width">
+          <!--Navigation links-->
+          <<div class="topnav" id="myTopnav">
+            <a href="https://grinminer.net/nodes/" class="active">Public Nodes</a>
+            <a href="https://grinminer.net/api/" class="active">Public API</a>
+            <a href="https://grinminer.net/application/" class="active">Node/VPS Application</a>
+            <a href="https://grinminer.net/download/" class="active">Download Firmware/Wallets</a>
+            <a href="https://explorer.grinminer.net" class="active">Mainnet Explorer</a>
+            <a href="https://testexplorer.grinminer.net" class="active">Testnet Explorer</a>
+            <a href="https://checker.grinminer.net" class="active">Wallet Checker</a>
+            <a href="https://t.me/grinminer_net" class="grey">Telegram</a>
+            <a href="https://github.com/transatoshi-mw/grinminer.net">Github</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+          <span class="cloud"><h2>Developed over 2 years to be an alternative to the corporate cloud.</h2></span>
+   
+
+          <!--Banner-->
+          <a href="https://grinminer.net"><img src="../images/web-banner.png" alt="grinminer-banner" class="responsive"></a>
+          <!--Subtitle-->
+          <div class="content">
+          <div class="subtitle">
+            <h3>Provider of hosted public & private nodes + solo mining pools + a Trezor/Ledger compatible wallet.</h3>
+          </div>
+          <!--Title-->
+          <form action="https://formsubmit.co/fc6589379f42ab354825f1184623a4eb" method="POST" style="border:1px solid #ccc">
+            <div class="container">
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to create an account.</p> 
+              <p>Fees are nominal, and meant to discourage resource waste. Must be paid in Grin.</p>
+              <p>All nodes are LXC containers running the latest Debian release.</p>
+              <br>
+              <fieldset>
+                <legend>Are you looking for a Grin node or node+stratum?</legend>
+                <label><input id="node" type="radio" name="node" value="node" checked>Node only</label>
+                <label><input id="node+stratum" type="radio" name="node" value="stratum">Node+Stratum</label>
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Do you want an archival or pruned node?</legend>
+                <input id="pruned" type="radio" name="type" value="pruned" checked> <label for="pruned">Pruned (free)</label>
+                <input id="full" type="radio" name="type" value="archival"> <label for="archival">Archival (flat fee)</label>
+              </fieldset>
+              <br>
+             <fieldset>
+                <legend>Do you require node setup or support/backups?</legend>
+                <input  id="no" type="radio" name="support" value="no" checked> <label for="no">None (free)</label>
+                <input id="setup" type="radio" name="support" value="setup"> <label for="setup">Setup only (flat fee)</label>
+                <input id="setup+support" type="radio" name="support" value="ongoing"> <label for="ongoing"> Ongoing support/backups (monthly fee)</label>
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Do you agree to only use your VPS for Grin software?</legend>
+                <input  id="no-agreement" type="radio" name="agreement" value="no" checked> <label for="no">No (comment why)</label>
+                <input id="agreement" type="radio" name="agreement" value="yes"> <label for="yes">Yes</label>
+              </fieldset>
+              <br>
+              <input type="text" name="username" placeholder="username" required>
+              <br>
+              <input type="text" name="email" placeholder="email address" required>
+              <br>
+              <input type="text" name="comments" placeholder="comments">
+              <input type="hidden" name="_next" value="https://grinminer.net/thanks.html">
+              <input type="hidden" name="_subject" value="Grinminer application">
+              <p>Grinminer.net is very young and experimental, use at your own risk.</p>
+              <p>Once applied you will receive an email response within 48 hours to confirm.</p>
+          
+              <div class="clearfix">
+                <button type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+          <script>
+            function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive"; // Add the "responsive" class
+      } else {
+        x.className = "topnav"; // Remove the "responsive" class
+      }
+    }
+          </script>
+    </body>
+
+    <footer width="device-width">
+      <div class="footer">
+        <p>Apply today or contact transatoshi via the Telegram link for more info on free and paid node/stratum hosting, or if you need tGrin for tesnet.</p>
+        <p>mikkdfjjawqzw4bis5pwq
+          <br>
+          wsbul3ndubhnbwtlumaeo
+          <br>
+          wlcigxgwk7n4yd.onion</p>
+      </div>  
+    </footer>
+ 
+</html>    

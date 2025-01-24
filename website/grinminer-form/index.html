@@ -1,0 +1,151 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Grinminer.net application</h1>
+        <p id="description" class="description text-center">
+          Apply for a free or paid node/stratum depending on support level
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">  
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Number of nodes<span class="clue">(max 4)</span></label>
+          <input
+            type="number"
+            name="nodes"
+            id="number"
+            min="1"
+            max="4"
+            class="form-control"
+            placeholder="node"
+          />
+        </div>
+        <div class="form-group">
+          <p>Select an option</p>
+          <select id="dropdown" name="stratum" class="form-control" required>
+            <option disabled selected value>Select features</option>
+            <option value="testnet">Testnet node</option>
+            <option value="testnet">Testnet node+mwixnet</option>
+            <option value="pruned">Pruned node</option>
+            <option value="node+stratum">Pruned node+stratum</option>
+            <option value="fullnode">Full node (10ツ)</option>
+            <option value="fullnode+stratum">Full node+stratum(10ツ)</option>
+          </select>   
+        </div>
+
+        <div class="form-group">
+          <p>Do you need setup help and ongoing support your node(s)?</p>
+          <label>
+            <input
+              name="setup"
+              value="no"
+              type="radio"
+              class="input-radio"
+              checked
+            />No</label>
+          <label>
+            <input
+              name="setup"
+              value="yes"
+              type="radio"
+              class="input-radio"
+              checked
+            />Yes (25ツ)</label>
+        </div>
+
+        <div class="form-group">
+          <p>Do you agree to only use this VPS for Grin?</p>
+          <select id="agreement" name="agreement" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Yes</option>
+            <option value="projects">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>What future features are you interested in?<span class="clue">(Check all that apply)</span></p>
+          <label>
+            <input
+              name="prefer"
+             value="firmware-update"
+              type="checkbox"
+              class="input-checkbox"
+            />Updated firmware</label>
+          <label>
+            <input
+              name="prefer"
+              value="firmware-overclock"
+              type="checkbox"
+              class="input-checkbox"
+            />Overclocked firmware</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="stratumv2"
+              type="checkbox"
+              class="input-checkbox"
+            />Stratum V2</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="controlpanel"
+              type="checkbox"
+              class="input-checkbox"
+            />Mining control panel</label>
+        </div>
+        <div class="form-group">
+          <p>Comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comments here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>    
+    </div>  
+  </body>  
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+
+
+** end of undefined **
+
