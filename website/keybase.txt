@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/transatoshi_mw
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://grinminer.net
+  * I am transatoshi_mw (https://keybase.io/transatoshi_mw) on keybase.
+  * I have a public key ASC1Wb8hMkls0eodgQ_hMOYgBA05mDPFZcTCoF_xuLsbOAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120897c79b9ab206b9cfc929ab98df4b05259bfaafce16a6d465e0bc2ac9b09f7030a",
+      "host": "keybase.io",
+      "kid": "0120b559bf2132496cd1ea1d810fe130e620040d399833c565c4c2a05ff1b8bb1b380a",
+      "uid": "d42e85c31bc107f29ae4610e66691d19",
+      "username": "transatoshi_mw"
+    },
+    "merkle_root": {
+      "ctime": 1734113191,
+      "hash": "f986aa1fff6cc45fcb6e92cfc73bfa1fa940e83825086d42bab25efc0821ef1969edf3a89c07654f158d3a131e2a494b6b40bcdf126a487af02c0176aca3c3cd",
+      "hash_meta": "d96288f778e802dbaf0875a9d960db9256c692413bff78e1434773749cd20e8d",
+      "seqno": 26375480
+    },
+    "service": {
+      "entropy": "NbhisNeZ1wT1/JopyQ/OLnl8",
+      "hostname": "grinminer.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.0"
+  },
+  "ctime": 1734113220,
+  "expire_in": 504576000,
+  "prev": "cc33d41ae5fcf3d79e11cb14e9ab844e8535a509eba43ff45e6da1063d5749a7",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtVm/ITJJbNHqHYEP4TDmIAQNOZgzxWXEwqBf8bi7GzgKp3BheWxvYWTESpcCD8QgzDPUGuX889eeEcsU6auEToU1pQnrpD/0Xm2hBj1XSafEIDX4tm0JIronPm+G1TuAvoNcIFw8jV+0DQuQaT8eEZMSAgHCo3NpZ8RAzvMnJN5aJ4MCfVwKkyHLYHxoecMcv8rUidQABVM6aIfcwNy2C5vDbqkSMtS2qiSpR7lJraViQ6g9VBh5MT2HDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKAU1bhRJYuDkbfQqjguDu9Mz40z+p0r2LAGDYdKT7eCo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/transatoshi_mw
+
+==================================================================
