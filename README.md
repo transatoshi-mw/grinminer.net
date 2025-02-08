@@ -1,2 +1,8 @@
 # grinminer.net
-Offering services to help Grin miners succeed at solo mining and the host of Grin's 24/7 block producing testnet node.
+Host of Grin's testnet community node giving devs 24/7 block production for testing.
+
+Privacy focused VPS provider with no KYC, contracts, or corporate ties.
+
+Grinminer.net is not controlled by any company or foundation.
+
+
