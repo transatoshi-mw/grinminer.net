@@ -57,12 +57,14 @@
       <span class="cloud"><h2>Developed over 2 years to be an alternative to the corporate cloud.</h2></span>
       
       <!--Title-->
-      <form action="https://formsubmit.co/fc6589379f42ab354825f1184623a4eb" method="POST" style="border:1px solid #ccc">
+      <form action="https://formsubmit.co/fc6589379f42ab354825f1184623a4eb" method="POST">
       <div class="container">
         <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p> 
-        <p>Fees are nominal, and meant to discourage resource waste. Must be paid in Grin.</p>
+        <p>Please fill in this form to create an account.</p>
+        <p>Fees are nominal [10ツ], and meant to discourage resource waste. Must be paid in Grin.</p>
+        <p>Node API access uses a username.grinminer.net format and SSH/Stratum uses ports like grinminer.net:xxxx</p>
         <p>All nodes are LXC containers running the latest Debian release.</p>
+        <p>SSH RSA public key required for server authentication.</p>
         <br>
         <fieldset>
         <legend>Are you looking for a Grin node or node+stratum?</legend>
@@ -77,10 +79,9 @@
         </fieldset>
         <br>
         <fieldset>
-        <legend>Do you require node setup or support/backups?</legend>
-        <input  id="no" type="radio" name="support" value="no" checked> <label for="no">None (free)</label>
-        <input id="setup" type="radio" name="support" value="setup"> <label for="setup">Setup only (flat fee)</label>
-        <input id="setup+support" type="radio" name="support" value="ongoing"> <label for="ongoing"> Ongoing support/backups (monthly fee)</label>
+        <legend>Do you require support/backups?</legend>
+        <input  id="no" type="radio" name="support" value="no" checked> <label for="no">No (free)</label>
+        <input id="setup+support" type="radio" name="support" value="ongoing"> <label for="ongoing">Support/backups (monthly fee)</label>
         </fieldset>
         <br>
         <fieldset>
@@ -89,20 +90,21 @@
         <input id="agreement" type="radio" name="agreement" value="yes"> <label for="yes">Yes</label>
         </fieldset>
         <br>
-        <input type="text" name="username" placeholder="username" required>
+        <textarea rows="1" cols="25" name="username" placeholder="username" required></textarea>
         <br>
-        <input type="text" name="email" placeholder="email address" required>
+        <textarea rows="1" cols="25" name="email" placeholder="email address" required></textarea>
         <br>
-        <input type="text" name="comments" placeholder="comments">
+        <textarea rows="5" cols="25" name="ssh" placeholder="SSH RSA public key" required></textarea>
+        <br>
+        <textarea rows="5" cols="25" name="comments" placeholder="comments (optional)"></textarea>
         <input type="hidden" name="_next" value="https://grinminer.net/thanks.html">
         <input type="hidden" name="_subject" value="Grinminer application">
-        <p>Grinminer.net is very young and experimental, use at your own risk.</p>
-        <p>Once applied you will receive an email response within 48 hours to confirm.</p>
-          
+        <p>Grinminer.net is very young and experimental, use at your own risk.</p>  
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="button big-btn">Sign Up</button>
       </div>
       </div>
+        <p>Once applied you will receive an email response within 24 hours to confirm.</p>
       </form>
           
       <script>
@@ -120,11 +122,7 @@
     <footer width="device-width">
       <div class="footer">
         <p>Apply today or contact transatoshi via the Telegram link for more info on free and paid node/stratum hosting, or if you need tGrin for tesnet.</p>
-        <p>mikkdfjjawqzw4bis5pwq
-          <br>
-          wsbul3ndubhnbwtlumaeo
-          <br>
-          wlcigxgwk7n4yd.onion</p>
+        <p>mikkdfjjawqzw4bis5pwqwsbul3ndubhnbwtlumaeowlcigxgwk7n4yd.onion</p>
       </div>  
     </footer>
  
