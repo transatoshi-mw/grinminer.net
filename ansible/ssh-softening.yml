@@ -1,0 +1,25 @@
+- hosts: all
+  remote_user: root
+  tasks:  
+
+  - name: Replace PermitRootLogin 
+    ansible.builtin.replace:
+      path: /etc/ssh/sshd_config
+      regexp: 'PermitRootLogin prohibit-password'
+      replace: 'PermitRootLogin yes'
+
+  - name: Replace PasswordAuthentication
+    ansible.builtin.replace:
+      path: /etc/ssh/sshd_config
+      regexp: 'PasswordAuthentication no'
+      replace: 'PasswordAuthentication yes' 
+
+  - name: Replace PasswordAuthentication
+    ansible.builtin.replace:
+      path: /etc/ssh/sshd_config
+      regexp: '#PasswordAuthentication no'
+      replace: 'PasswordAuthentication yes' 
+
+  - name: Restart SSH
+    ansible.builtin.shell:
+      cmd: systemctl restart ssh   
